@@ -216,10 +216,10 @@ void odom_callback(const nav_msgs::OdometryConstPtr& msg){
   double dt = (ros::Time::now() - prev_time).toSec();
   prev_time = ros::Time::now();
 
-  //double yaw    = joy_msg.axes[axis_yaw]    * axis_direction_yaw;
-  //double roll   = joy_msg.axes[axis_roll]   * axis_direction_roll;
-  //double pitch  = joy_msg.axes[axis_pitch]  * axis_direction_pitch;
-  //double thrust = joy_msg.axes[axis_thrust] * axis_direction_thrust;
+  // double yaw    = joy_msg.axes[axis_yaw]    * axis_direction_yaw;
+  // double roll   = joy_msg.axes[axis_roll]   * axis_direction_roll;
+  // double pitch  = joy_msg.axes[axis_pitch]  * axis_direction_pitch;
+  // double thrust = joy_msg.axes[axis_thrust] * axis_direction_thrust;
 
 
   if (emergency){
