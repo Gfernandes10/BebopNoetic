@@ -12,16 +12,9 @@ sudo apt install ros-noetic-joy ros-noetic-joy-teleop ros-noetic-teleop-twist-jo
 ```
 Add this line in your bash.rc 
 ``` bash
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<path_to_your_catkin_ws>/devel/lib/parrot_arsdk
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:/home/gabriel/wsbebop/src/BebopNoetic
+source ~/bebop_ws/devel/setup.bash
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(~/bebop_ws)
 ```
-
-Source your workspace
-``` bash
-source devel/setup.bash
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)
-```
-
 
 To run the simulator use
 ``` bash
