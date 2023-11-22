@@ -13,7 +13,7 @@ sudo apt install ros-noetic-joy ros-noetic-joy-teleop ros-noetic-teleop-twist-jo
 Add this line in your bash.rc 
 ``` bash
 source ~/bebop_ws/devel/setup.bash
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(~/bebop_ws)
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/bebop_ws
 ```
 
 To run the simulator use
