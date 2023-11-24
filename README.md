@@ -24,7 +24,7 @@ To run the simulator use
 roslaunch Interface_Bebop bebopgazebo.launch
 ```
 
-To run the aruco tag detection use
+To run the simulator with aruco tag detection use
 ``` bash
 roslaunch Interface_Bebop bebopgazeboaruco.launch 
 roslaunch Interface_Bebop monosingle.launch 
