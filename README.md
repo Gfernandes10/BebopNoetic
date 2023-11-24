@@ -1,6 +1,7 @@
 # BebopNoetic
 ``` bash
 mkdir -p bebop_ws/src && cd bebop_ws/src
+git clone https://github.com/Gfernandes10/BebopNoetic.git
 ```
 ``` bash
 sudo apt update
