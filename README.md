@@ -2,6 +2,7 @@
 ``` bash
 mkdir -p bebop_ws/src && cd bebop_ws/src
 git clone https://github.com/Gfernandes10/BebopNoetic.git
+git clone https://github.com/pal-robotics/aruco_ros.git -b noetic-devel
 ```
 ``` bash
 sudo apt update
@@ -21,4 +22,15 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/bebop_ws/devel/lib/parrot_arsdk
 To run the simulator use
 ``` bash
 roslaunch Interface_Bebop bebopgazebo.launch
+```
+
+To run the aruco tag detection use
+``` bash
+roslaunch Interface_Bebop bebopgazeboaruco.launch 
+roslaunch Interface_Bebop monosingle.launch 
+```
+
+To connect with the real drone use
+``` bash
+roslaunch Interface_Bebop bebopreal.launch
 ```
