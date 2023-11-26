@@ -59,6 +59,17 @@
     </node>
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    
   </group>
+    <node name="RobotPoseInWorld" pkg="Interface_Bebop" type="RobotPoseInWorld.py" >
+      <!-- Tag position world -->
+      <param name="TagPx" value="0.4" />
+      <param name="TagPy" value="0.0" />
+      <param name="TagPz" value="1.5" />      
+      <param name="TagRoll" value="0.0" />  <!-- rad -->
+      <param name="TagPitch" value="1.57" /> <!-- rad -->
+      <param name="TagYaw" value="0.0" />  <!-- rad -->
+    </node>
     <include file="$(find bebop_tools)/launch/joy_teleop.launch" />
+    <include file="$(find Interface_Bebop)/launch/monosingle.launch" />
 </launch>

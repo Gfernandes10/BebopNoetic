@@ -31,7 +31,7 @@
     <!-- AR marker -->
     <include>
       <uri>model://marker26_8cm_massless</uri>
-      <pose>0.4 0 1.5 0 1.5707 0</pose>
+      <pose>0.0 0 0.8 0 1.5707 0</pose>
     </include>
     <!-- Add a light on top of REEM and the marker -->
     <light name="marker_light" type="point">
