@@ -11,6 +11,8 @@ sudo apt install libusb-dev python3-osrf-pycommon libspnav-dev libbluetooth-dev 
 sudo apt install ros-noetic-mavros ros-noetic-octomap-ros 
 sudo apt-get install libavahi-client-dev
 sudo apt install ros-noetic-joy ros-noetic-joy-teleop ros-noetic-teleop-twist-joy
+pip install filterpy
+
 ```
 Add this line in your bash.rc 
 ``` bash
@@ -27,7 +29,6 @@ roslaunch Interface_Bebop bebopgazebo.launch
 To run the simulator with aruco tag detection use
 ``` bash
 roslaunch Interface_Bebop bebopgazeboaruco.launch 
-roslaunch Interface_Bebop monosingle.launch 
 ```
 
 To connect with the real drone use
