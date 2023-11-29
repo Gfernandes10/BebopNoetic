@@ -5,7 +5,7 @@ git clone https://github.com/Gfernandes10/BebopNoetic.git
 git clone https://github.com/pal-robotics/aruco_ros.git -b noetic-devel
 ```
 ``` bash
-sudo apt update
+sudo apt upgrade
 sudo apt install build-essential python3-rosdep python3-catkin-tools
 sudo apt install libusb-dev python3-osrf-pycommon libspnav-dev libbluetooth-dev libcwiid-dev libgoogle-glog-dev
 sudo apt install ros-noetic-mavros ros-noetic-octomap-ros 
