@@ -32,11 +32,15 @@
       <arg name="enable_logging" value="$(arg enable_logging)" />
       <arg name="enable_ground_truth" value="$(arg enable_ground_truth)" />
       <arg name="log_file" value="$(arg log_file)"/>
+      <arg name="x" value="0.0"/>
+      <arg name="y" value="0.0"/>
+      <arg name="z" value="0.3"/>
+      <arg name="yaw" value="0.0"/>
     </include>
-    <node name="joy_node" pkg="joy" type="joy_node">
+    <!-- <node name="joy_node" pkg="joy" type="joy_node">
       <param name="dev" value="$(arg dev)" />
       <param name="dev_name" value="Sony Interactive Entertainment Wireless Controller" />
-    </node>
+    </node> -->
     <!-- <node name="ps4_controller_node" pkg="Interface_Bebop" type="Ps4ControllerNode.py" output="screen">
       <remap from="/joy"  to="/bebop2/joy" />
     </node> -->
@@ -59,17 +63,19 @@
     </node>
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-    
-  </group>
-    <node name="RobotPoseInWorld" pkg="Interface_Bebop" type="RobotPoseInWorld.py" >
-      <!-- Tag position world -->
-      <param name="TagPx" value="0.4" />
+    <node name="kalman_filter_node" pkg="Interface_Bebop" type="Kalman.py" />
+  </group>    
+    <node name="RobotPoseInWorld" pkg="Interface_Bebop" type="RobotPoseInWorldtf.py" >      
+      <param name="TagPx" value="1.0" />
       <param name="TagPy" value="0.0" />
-      <param name="TagPz" value="1.5" />      
-      <param name="TagRoll" value="0.0" />  <!-- rad -->
-      <param name="TagPitch" value="1.57" /> <!-- rad -->
-      <param name="TagYaw" value="0.0" />  <!-- rad -->
+      <param name="TagPz" value="0.8" />      
+      <param name="TagRoll" value="0.0" />  
+      <param name="TagPitch" value="-1.57" /> 
+      <param name="TagYaw" value="0.0" />  
     </node>
+    
+    <!-- <node name="RobotPoseInWorld" pkg="Interface_Bebop" type="RobotPoseInWorldtf.py" >       
+    </node> -->
     <include file="$(find bebop_tools)/launch/joy_teleop.launch" />
     <include file="$(find Interface_Bebop)/launch/monosingle.launch" />
 </launch>

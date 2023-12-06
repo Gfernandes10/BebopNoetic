@@ -1,0 +1,1 @@
+rosbag record -O cont.bag /aruco_single/pose /bebop2/ground_truth/pose /robot_aruco_pose /bebop2/odometry_sensor1/odometry /filtered_pose /bebop2/ground_truth/odometry /bebop/cmd_vel /erros /poseref /poseref /linear_system/pose
